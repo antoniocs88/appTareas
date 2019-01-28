@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:contentDescription="@string/fondo_darth_vader"
+        android:scaleType="matrix"
+        android:src="@mipmap/darthvader" />
+
+    <TextView
+        android:id="@+id/titulo"
+        style="@style/etiquetas"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/mis_tareas"
+        android:textSize="40sp"
+ />
+
+    <TextView
+        android:id="@+id/subtitulo"
+        style="@style/etiquetas"
+        android:layout_below="@+id/titulo"
+        android:layout_marginTop="10dp"
+        android:text="@string/antoniocs88"
+        android:textSize="20sp"
+ />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/subtitulo"
+        android:background="@color/colorblanco"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:padding="10dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+>
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/cajaUser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Usuario"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorAccent"
+                android:textSize="18sp">
+                <requestFocus/>
+
+
+            </android.support.design.widget.TextInputEditText>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+>
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/cajaPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimaryDark"
+                android:textColorHint="@color/colorAccent"
+
+                android:textSize="18sp" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/botonlogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linear"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="@string/login"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:background="@drawable/boton"
+        android:onClick="login"
+
+        />
+
+    <TextView
+        android:id="@+id/crearcuenta"
+        style="@style/etiquetas"
+        android:layout_below="@+id/botonlogin"
+        android:layout_marginTop="10dp"
+        android:includeFontPadding="true"
+        android:text="@string/crea_una_cuenta"
+        android:textSize="20sp"
+        android:onClick="crearCuenta"
+/>
+
+</RelativeLayout>
